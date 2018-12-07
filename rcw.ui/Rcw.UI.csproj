@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BFD1A31-DA2F-4C73-9343-388DCA4FFC93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Rcw.UI</RootNamespace>
+    <AssemblyName>Rcw.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Rcw.Data">
+      <HintPath>..\..\Rcw.Data\bin\Debug\Rcw.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Rcw.Method">
+      <HintPath>..\..\Rcw.Method\bin\Debug\Rcw.Method.dll</HintPath>
+    </Reference>
+    <Reference Include="Skin.Bars, Version=1.0.0.0, Culture=neutral, PublicKeyToken=407539c89d1c2327, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Skin.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="CustomWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomWaitForm.Designer.cs">
+      <DependentUpon>CustomWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DllPath.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeptSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeptSelect.Designer.cs">
+      <DependentUpon>FrmDeptSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeptUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeptUser.Designer.cs">
+      <DependentUpon>FrmDeptUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDEPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDEPT.Designer.cs">
+      <DependentUpon>FrmDEPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoadDll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoadDll.Designer.cs">
+      <DependentUpon>FrmLoadDll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuAdd.Designer.cs">
+      <DependentUpon>FrmMenuAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuMag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuMag.Designer.cs">
+      <DependentUpon>FrmMenuMag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBtnMag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBtnMag.Designer.cs">
+      <DependentUpon>FrmBtnMag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRight.Designer.cs">
+      <DependentUpon>FrmRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRole.Designer.cs">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetRole.Designer.cs">
+      <DependentUpon>FrmSetRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserAdd.Designer.cs">
+      <DependentUpon>FrmUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserEdit.Designer.cs">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserManage.Designer.cs">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuMag.cs" />
+    <Compile Include="Model\test.cs" />
+    <Compile Include="Model\TS_USER_FUN.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubModel\KeyValue.cs" />
+    <Compile Include="PubModel\PubEnum.cs" />
+    <Compile Include="PubModel\PubModel.cs" />
+    <Compile Include="ResolveExpress\Check.cs" />
+    <Compile Include="ResolveExpress\Constant.cs" />
+    <Compile Include="ResolveExpress\Expressions.cs" />
+    <Compile Include="ResolveExpress\IsWhatExtensions.cs" />
+    <Compile Include="ResolveExpress\Main.cs" />
+    <Compile Include="ResolveExpress\Method.cs" />
+    <Compile Include="ResolveExpress\Models.cs" />
+    <Compile Include="ResolveExpress\Property.cs" />
+    <Compile Include="ResolveExpress\PubConvert.cs" />
+    <Compile Include="ResolveExpress\SqlSugarTool.cs" />
+    <Compile Include="ResolveExpress\SqlSugarToolExtensions.cs" />
+    <Compile Include="ServerTime.cs" />
+    <Compile Include="topMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="topMenu.Designer.cs">
+      <DependentUpon>topMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TS_DEPT.cs" />
+    <Compile Include="Model\TS_MODULE.cs" />
+    <Compile Include="Model\TS_ROLE_FUN.cs" />
+    <Compile Include="Model\TS_ROLE.cs" />
+    <Compile Include="Model\TS_USER.cs" />
+    <Compile Include="Model\TS_USER_ROLE.cs" />
+    <Compile Include="UserButtonRight.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="WaitingFrom.cs" />
+    <EmbeddedResource Include="CustomWaitForm.resx">
+      <DependentUpon>CustomWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeptSelect.resx">
+      <DependentUpon>FrmDeptSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeptUser.resx">
+      <DependentUpon>FrmDeptUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDEPT.resx">
+      <DependentUpon>FrmDEPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoadDll.resx">
+      <DependentUpon>FrmLoadDll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuAdd.resx">
+      <DependentUpon>FrmMenuAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuMag.resx">
+      <DependentUpon>FrmMenuMag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBtnMag.resx">
+      <DependentUpon>FrmBtnMag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRight.resx">
+      <DependentUpon>FrmRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRole.resx">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetRole.resx">
+      <DependentUpon>FrmSetRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserAdd.resx">
+      <DependentUpon>FrmUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserEdit.resx">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserManage.resx">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="topMenu.resx">
+      <DependentUpon>topMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Rcw.Model.TS_MODULE.datasource" />
+    <None Include="Properties\DataSources\Rcw.Model.TS_USER.datasource" />
+    <None Include="Properties\DataSources\TS_DEPT.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\飞鸽截图20181017153459.png" />
+    <Content Include="权限分配规则.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
