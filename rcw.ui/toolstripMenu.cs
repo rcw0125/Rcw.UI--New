@@ -216,5 +216,11 @@ namespace Rcw.UI
         {
            
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            topMenu tp = new topMenu();
+            tp.Show();
+        }
     }
 }
