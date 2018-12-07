@@ -190,6 +190,12 @@
     <Compile Include="ResolveExpress\SqlSugarTool.cs" />
     <Compile Include="ResolveExpress\SqlSugarToolExtensions.cs" />
     <Compile Include="ServerTime.cs" />
+    <Compile Include="toolstripMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="toolstripMenu.Designer.cs">
+      <DependentUpon>toolstripMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="topMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="toolstripMenu.resx">
+      <DependentUpon>toolstripMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="topMenu.resx">
       <DependentUpon>topMenu.cs</DependentUpon>
     </EmbeddedResource>

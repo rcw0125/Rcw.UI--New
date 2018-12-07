@@ -66,8 +66,10 @@ namespace Rcw.UI
                     UserInfo.UserID = User.C_ID;
                     UserInfo.UserAccount = User.C_ACCOUNT;
                     UserInfo.UserName = User.C_NAME;
-                    topMenu frm = new topMenu();
-                    frm.Show();
+                    //topMenu frm = new topMenu();
+                    //frm.Show();
+                    toolstripMenu tm = new toolstripMenu();
+                    tm.Show();
                     this.Hide();
 
                 }
