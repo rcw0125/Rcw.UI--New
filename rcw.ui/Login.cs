@@ -42,6 +42,7 @@ namespace Rcw.UI
         {
             try
             {
+                TS_USER.Queryable.Where(o => o.C_AREA == "").OrderBy(o=>o.C_AREA).ToList();
                 //IQueryable<TS_USER> user=null;
                 //TS_USER.Where(user, o => o.N_TYPE == 3 && o.C_ACCOUNT=="17318" && o.C_TS.CompareTo("2018-12-03 17:11:44") >0&&o.N_STATUS== TS_USER.userStatus.正常&&o.C_TS.CompareTo("2018-12-08 17:11:44") <0);
 
@@ -53,7 +54,7 @@ namespace Rcw.UI
                 
                 string passWord = Common.MD5(txt_Pwd.Text.Trim());
                 TS_USER User = TS_USER.IQueryable.
-                    Where(o => o.C_ACCOUNT.ToString() == userName && o.C_PASSWORD == passWord.ToString() && o.N_STATUS == TS_USER.userStatus.正常 && o.C_TS.CompareTo("2018-12-03 17:11:44") > 0&&o.ts!=null&&o.ts>System.DateTime.Now.AddDays(-5));
+                    Where(o => o.C_ACCOUNT.ToString() == userName && o.C_PASSWORD == passWord.ToString() && o.N_STATUS == TS_USER.userStatus.正常 && o.C_TS.CompareTo("2018-12-03 17:11:44") > 0&&o.ts!=null&&o.ts>System.DateTime.Now.AddDays(-5)).FirstOrDefault();
                 var data = TS_USER.IQueryable.Where(o => o.ts !=null);
                 if (User != null)
                 {

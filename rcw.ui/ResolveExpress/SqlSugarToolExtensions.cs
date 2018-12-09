@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     ///<summary>
     /// ** 描述：SqlSugar扩展工具类

@@ -6,7 +6,7 @@ using System.Text;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     /// <summary>
     /// ** 描述：拉姆达解析类

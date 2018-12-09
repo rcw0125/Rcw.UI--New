@@ -175,20 +175,6 @@
     <Compile Include="Model\TS_USER_FUN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PubModel\KeyValue.cs" />
-    <Compile Include="PubModel\PubEnum.cs" />
-    <Compile Include="PubModel\PubModel.cs" />
-    <Compile Include="ResolveExpress\Check.cs" />
-    <Compile Include="ResolveExpress\Constant.cs" />
-    <Compile Include="ResolveExpress\Expressions.cs" />
-    <Compile Include="ResolveExpress\IsWhatExtensions.cs" />
-    <Compile Include="ResolveExpress\Main.cs" />
-    <Compile Include="ResolveExpress\Method.cs" />
-    <Compile Include="ResolveExpress\Models.cs" />
-    <Compile Include="ResolveExpress\Property.cs" />
-    <Compile Include="ResolveExpress\PubConvert.cs" />
-    <Compile Include="ResolveExpress\SqlSugarTool.cs" />
-    <Compile Include="ResolveExpress\SqlSugarToolExtensions.cs" />
     <Compile Include="ServerTime.cs" />
     <Compile Include="toolstripMenu.cs">
       <SubType>Form</SubType>
