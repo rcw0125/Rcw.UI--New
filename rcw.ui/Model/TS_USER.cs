@@ -649,6 +649,10 @@ namespace Rcw.Model
         }
 
         public static IQueryable<TS_USER> IQueryable = null;
+        public static Rcw.Data.Queryable<TS_USER> Queryable()
+        {
+            return  new Queryable<TS_USER>(); 
+        }
 
         public static void Where( IQueryable<TS_USER> queryable, Expression<Func<TS_USER, bool>> expression)
         {

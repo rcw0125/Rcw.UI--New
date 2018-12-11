@@ -1,5 +1,5 @@
 ﻿using Rcw.Data;
-using SQLiteSugar;
+using Rcw.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,35 +9,35 @@ namespace Rcw.UI
 {
     public static class test
     {
-        public static T Where<T>(this IQueryable<T> queryable, System.Linq.Expressions.Expression<Func<T, bool>> expression) where T : DbEntity, new()
-        {
+        //public static T Where<T>(this IQueryable<T> queryable, System.Linq.Expressions.Expression<Func<T, bool>> expression) where T : DbEntity, new()
+        //{
             
-            ResolveExpress re = new ResolveExpress();
-            re.ResolveExpression(re, expression);
-            var sql = re.SqlWhere;
-            var paras = re.Paras;
-            object[] obj=new  object[paras.Count];
-            if (paras.Count > 0)
-            {
-                for (int i = 0; i <paras.Count; i++)
-                {
-                    obj[i] = paras[i];
-                }
-            }
-            sql = CheckSql(sql);
-            //string whereSql = expression.Body.ToString();
-            //string para = expression.Parameters[0].Name + ".";
-            //whereSql = whereSql.Replace(para, "").Replace("==", "=");
-            //whereSql = whereSql.Replace("AndAlso", "And").Replace("\"", "'");
-            //whereSql = whereSql.Replace("OrElse", "Or").Replace("\"", "'");
-            //whereSql = whereSql.Replace("Convert", "");
-            //whereSql = CheckSql(whereSql);
-            //whereSql = CheckSql(whereSql);
+        //    ResolveExpress re = new ResolveExpress();
+        //    re.ResolveExpression(re, expression);
+        //    var sql = re.SqlWhere;
+        //    var paras = re.Paras;
+        //    object[] obj=new  object[paras.Count];
+        //    if (paras.Count > 0)
+        //    {
+        //        for (int i = 0; i <paras.Count; i++)
+        //        {
+        //            obj[i] = paras[i];
+        //        }
+        //    }
+        //    sql = CheckSql(sql);
+        //    //string whereSql = expression.Body.ToString();
+        //    //string para = expression.Parameters[0].Name + ".";
+        //    //whereSql = whereSql.Replace(para, "").Replace("==", "=");
+        //    //whereSql = whereSql.Replace("AndAlso", "And").Replace("\"", "'");
+        //    //whereSql = whereSql.Replace("OrElse", "Or").Replace("\"", "'");
+        //    //whereSql = whereSql.Replace("Convert", "");
+        //    //whereSql = CheckSql(whereSql);
+        //    //whereSql = CheckSql(whereSql);
 
-            var data = DbContext.LoadDataByWhere<T>(sql,obj);
-            return data[0];
+        //    var data = DbContext.LoadDataByWhere<T>(sql,obj);
+        //    return data[0];
 
-        }
+        //}
 
         /// <summary>
         /// lambda表达式中出现字符串比较时（CompareTo），的处理方法

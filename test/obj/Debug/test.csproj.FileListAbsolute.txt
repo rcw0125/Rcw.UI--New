@@ -119,7 +119,6 @@ C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\DevExpress.Office.v17.2.Core.dll
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\DevExpress.Images.v17.2.dll
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.UI.pdb
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.UI.dll.config
-C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\MySql.Data.xml
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\DevExpress.XtraGrid.v17.2.xml
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\DevExpress.XtraEditors.v17.2.xml
 C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\DevExpress.Utils.v17.2.xml
@@ -192,3 +191,7 @@ C:\Users\rcw\Desktop\Rcw.UI\test\obj\Debug\test.csproj.CoreCompileInputs.cache
 C:\Users\rcw\Desktop\Rcw.UI\test\obj\Debug\test.csproj.CopyComplete
 C:\Users\rcw\Desktop\Rcw.UI\test\obj\Debug\test.exe
 C:\Users\rcw\Desktop\Rcw.UI\test\obj\Debug\test.pdb
+C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.Data.pdb
+C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.Oracle.dll
+C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.Oracle.pdb
+C:\Users\rcw\Desktop\Rcw.UI\test\bin\Debug\Rcw.Oracle.xml

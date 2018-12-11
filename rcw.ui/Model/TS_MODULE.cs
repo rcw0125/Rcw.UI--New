@@ -6,17 +6,17 @@ using Rcw.Data;
 using System.ComponentModel;
 namespace Rcw.Model
 {
-	 	//TS_MODULE
-		
-        
-        [DbTable("TS_USER_FUN","userfun", "userfun.C_MODULE_ID=main.C_ID", JoinType.Left)]
-        [DbTable(TableAlias ="main",IsDistinct =true)]
-        
-	public class TS_MODULE : DbEntity
-	{
-   		#region  属性    
-      			
-		private string _c_id;	
+    //TS_MODULE
+
+
+    [DbTable("TS_USER_FUN", "userfun", "userfun.C_MODULE_ID=main.C_ID", JoinType.Left)]
+    [DbTable(TableAlias = "main", IsDistinct = true)]
+
+    public class TS_MODULE : DbEntity
+    {
+        #region  属性    
+
+        private string _c_id;	
 		/// <summary>
 		/// 模块编码
         /// </summary>		
@@ -126,27 +126,27 @@ namespace Rcw.Model
             }
         }        
 				
-		private string _c_disable;	
-		/// <summary>
-		/// 是否禁用，0-禁用；1-启用
-        /// </summary>		
+		//private string _c_disable;	
+		///// <summary>
+		///// 是否禁用，0-禁用；1-启用
+  //      /// </summary>		
 				
-		[DisplayName("是否禁用，0-禁用；1-启用")]
-        public string C_DISABLE
-        {
-            get
-            {
-            	return _c_disable; 
-            }
-            set
-            {
-                if (_c_disable != value)
-                {
-                   _c_disable = value;
-                   RaisePropertyChanged("C_DISABLE", true);	                   
-                }
-            }
-        }        
+		//[DisplayName("是否禁用，0-禁用；1-启用")]
+  //      public string C_DISABLE
+  //      {
+  //          get
+  //          {
+  //          	return _c_disable; 
+  //          }
+  //          set
+  //          {
+  //              if (_c_disable != value)
+  //              {
+  //                 _c_disable = value;
+  //                 RaisePropertyChanged("C_DISABLE", true);	                   
+  //              }
+  //          }
+  //      }        
 				
 		private decimal _n_order;	
 		/// <summary>
@@ -192,12 +192,41 @@ namespace Rcw.Model
             }
         }
 
-        public enum MODULE_TYPE
+      
+
+        public enum STATUS_TYPE
         {
-            系统模块=0,
-            按钮模块=1
+            正常=0,
+            停用=1
+        }
+        private STATUS_TYPE _n_status;
+        /// <summary>
+        /// 状态：0-正常;1-停用
+        /// </summary>		
+
+        [DisplayName("状态")]
+        public STATUS_TYPE N_STATUS
+        {
+            get
+            {
+                return _n_status;
+            }
+            set
+            {
+                if (_n_status != value)
+                {
+                    _n_status = value;
+                    RaisePropertyChanged("N_STATUS", true);
+                }
+            }
         }
 
+
+        public enum MODULE_TYPE
+        {
+            系统模块 = 0,
+            按钮模块 = 1
+        }
         private MODULE_TYPE _n_module_type;
         /// <summary>
         /// 模块类型：0-系统模块;1-按钮模块

@@ -40,7 +40,6 @@
             this.colC_ASSEMBLYNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colC_MODULECLASS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colC_DISABLE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colN_IMAGEINDEX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colN_MODULE_TYPE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colC_QUERY_STR = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,6 +49,8 @@
             this.tSUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colD_MOD_DT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lab_Name = new DevExpress.XtraEditors.LabelControl();
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
@@ -62,9 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gc_ANXX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modTSMODULEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ANXX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -123,7 +124,8 @@
             this.colC_REMARK,
             this.colC_EMP_ID,
             this.colD_MOD_DT,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gv_ANXX.GridControl = this.gc_ANXX;
             this.gv_ANXX.Name = "gv_ANXX";
             this.gv_ANXX.OptionsView.ShowGroupPanel = false;
@@ -167,18 +169,8 @@
             // colC_DISABLE
             // 
             this.colC_DISABLE.Caption = "是否启用";
-            this.colC_DISABLE.ColumnEdit = this.repositoryItemCheckEdit1;
             this.colC_DISABLE.FieldName = "C_DISABLE";
             this.colC_DISABLE.Name = "colC_DISABLE";
-            this.colC_DISABLE.Visible = true;
-            this.colC_DISABLE.VisibleIndex = 5;
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.ValueChecked = "1";
-            this.repositoryItemCheckEdit1.ValueUnchecked = "0";
             // 
             // colN_IMAGEINDEX
             // 
@@ -246,6 +238,20 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.FieldName = "N_STATUS";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 5;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.ValueChecked = "1";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "0";
             // 
             // panel4
             // 
@@ -346,9 +352,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gc_ANXX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modTSMODULEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ANXX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -389,5 +395,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private System.Windows.Forms.BindingSource tSUSERBindingSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

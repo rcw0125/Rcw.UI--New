@@ -34,8 +34,8 @@
             this.superTabItem1 = new Skin.Bars.SuperTabItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -111,16 +111,6 @@
             this.toolStripSplitButton1.Size = new System.Drawing.Size(88, 44);
             this.toolStripSplitButton1.Text = "系统管理";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.superTabControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 47);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 403);
-            this.panel1.TabIndex = 5;
-        
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
@@ -129,6 +119,15 @@
             this.toolStripButton1.Size = new System.Drawing.Size(80, 44);
             this.toolStripButton1.Text = "topmenu";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.superTabControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(836, 403);
+            this.panel1.TabIndex = 5;
             // 
             // toolstripMenu
             // 

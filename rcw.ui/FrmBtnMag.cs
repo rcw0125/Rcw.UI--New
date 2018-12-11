@@ -128,7 +128,8 @@ namespace Rcw.UI
                 tsMoudle.C_PARENT_ID = tag;
                 tsMoudle.N_ORDER = PrivilegeMag.GetModuleMaxOrder(tsMoudle.C_PARENT_ID) + 1;
                 tsMoudle.C_EMP_ID = UserInfo.UserID;
-                tsMoudle.C_DISABLE = "1";
+                //tsMoudle.C_DISABLE = "1";
+                tsMoudle.N_STATUS = TS_MODULE.STATUS_TYPE.正常;
                 tsMoudle.N_MODULE_TYPE = TS_MODULE.MODULE_TYPE.按钮模块;
                 tsMoudle.C_ASSEMBLYNAME = lab_Name.Text;
                 btnResource.Add(tsMoudle);

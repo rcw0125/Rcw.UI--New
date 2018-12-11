@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcw.UI", "Rcw.UI.csproj", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "..\test\test.csproj", "{04F9F25C-27C6-48C1-964B-4855A634C8DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcw.Data", "..\Rcw.Data\Rcw.Data.csproj", "{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcw.Oracle", "..\Rcw.Oracle\Rcw.Oracle.csproj", "{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{04F9F25C-27C6-48C1-964B-4855A634C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04F9F25C-27C6-48C1-964B-4855A634C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04F9F25C-27C6-48C1-964B-4855A634C8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

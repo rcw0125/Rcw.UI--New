@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B04F7787-31A0-445B-A2E0-5C74DAFCB3D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rcw.Data</RootNamespace>
+    <AssemblyName>Rcw.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Rcw.Oracle">
+      <HintPath>..\Rcw.Oracle\bin\Debug\Rcw.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalFrameWork\CalUtility.cs" />
+    <Compile Include="CalFrameWork\FormulaItem.cs" />
+    <Compile Include="CalFrameWork\FormulaItemType.cs" />
+    <Compile Include="CalFrameWork\IGetTagValue.cs" />
+    <Compile Include="CalFrameWork\OperAdd.cs" />
+    <Compile Include="CalFrameWork\OperAnd.cs" />
+    <Compile Include="CalFrameWork\OperBase.cs" />
+    <Compile Include="CalFrameWork\OperDec.cs" />
+    <Compile Include="CalFrameWork\OperDiv.cs" />
+    <Compile Include="CalFrameWork\OperEq.cs" />
+    <Compile Include="CalFrameWork\OperGe.cs" />
+    <Compile Include="CalFrameWork\OperGt.cs" />
+    <Compile Include="CalFrameWork\OperLe.cs" />
+    <Compile Include="CalFrameWork\OperLp.cs" />
+    <Compile Include="CalFrameWork\OperLt.cs" />
+    <Compile Include="CalFrameWork\OperMod.cs" />
+    <Compile Include="CalFrameWork\OperNe.cs" />
+    <Compile Include="CalFrameWork\OperNeg.cs" />
+    <Compile Include="CalFrameWork\OperNot.cs" />
+    <Compile Include="CalFrameWork\OperOr.cs" />
+    <Compile Include="CalFrameWork\OperRide.cs" />
+    <Compile Include="CalFrameWork\OperRp.cs" />
+    <Compile Include="Data\Access\AccessDataReaderExtendsion.cs" />
+    <Compile Include="Data\Access\AccessDataSource.cs" />
+    <Compile Include="Data\CodeBuilder\tableInfo.cs" />
+    <Compile Include="Data\ColOperation.cs" />
+    <Compile Include="Data\CustomAttributeExtensions.cs" />
+    <Compile Include="Data\DataSource.cs" />
+    <Compile Include="Data\DbColumnInfo.cs" />
+    <Compile Include="Data\DbContext.cs" />
+    <Compile Include="Data\DbEntity.cs" />
+    <Compile Include="Data\DbEntityInfo.cs" />
+    <Compile Include="Data\DbEntityTable.cs" />
+    <Compile Include="Data\DbSourceAttribute.cs" />
+    <Compile Include="Data\DbSql.cs" />
+    <Compile Include="Data\DbTableAttribute.cs" />
+    <Compile Include="Data\DbTableColumnAttribute.cs" />
+    <Compile Include="Data\IFilter.cs" />
+    <Compile Include="Data\ISetterValue.cs" />
+    <Compile Include="Data\JoinTableInfo.cs" />
+    <Compile Include="Data\Mapping\AttributeMappingSource.cs" />
+    <Compile Include="Data\Mysql\MysqlDataReaderExtendsion.cs" />
+    <Compile Include="Data\Mysql\MySqlDataSource.cs" />
+    <Compile Include="Data\NonTableFieldAttribute.cs" />
+    <Compile Include="Data\Oracle\OracleDataReaderExtendsion.cs" />
+    <Compile Include="Data\Oracle\OracleDataSource.cs" />
+    <Compile Include="Data\Page.cs" />
+    <Compile Include="Data\QueryAttribute.cs" />
+    <Compile Include="Data\RefPropertyAttribute.cs" />
+    <Compile Include="Data\SaveTemplate.cs" />
+    <Compile Include="Data\SqlServer\SqlDataReaderExtendsion.cs" />
+    <Compile Include="Data\SqlServer\SqlServerDataSource.cs" />
+    <Compile Include="Lambda\PubModel\KeyValue.cs" />
+    <Compile Include="Lambda\PubModel\PubEnum.cs" />
+    <Compile Include="Lambda\PubModel\PubModel.cs" />
+    <Compile Include="Lambda\Queryable\Queryable.cs" />
+    <Compile Include="Lambda\Queryable\QueryableExtensions.cs" />
+    <Compile Include="Lambda\ResolveExpress\Check.cs" />
+    <Compile Include="Lambda\ResolveExpress\Constant.cs" />
+    <Compile Include="Lambda\ResolveExpress\Expressions.cs" />
+    <Compile Include="Lambda\ResolveExpress\IsWhatExtensions.cs" />
+    <Compile Include="Lambda\ResolveExpress\Main.cs" />
+    <Compile Include="Lambda\ResolveExpress\Method.cs" />
+    <Compile Include="Lambda\ResolveExpress\Models.cs" />
+    <Compile Include="Lambda\ResolveExpress\Property.cs" />
+    <Compile Include="Lambda\ResolveExpress\PubConvert.cs" />
+    <Compile Include="Lambda\ResolveExpress\ResolveFieldName.cs" />
+    <Compile Include="Lambda\ResolveExpress\ResolveSelect.cs" />
+    <Compile Include="Lambda\ResolveExpress\SqlSugarTool.cs" />
+    <Compile Include="Lambda\ResolveExpress\SqlSugarToolExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Access\Aceess系统权限.docx" />
+    <None Include="Data\Oracle\oracle数据库操作.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\MySql.Data.dll" />
+    <Content Include="Dll\Oracle.ManagedDataAccess.dll" />
+    <Content Include="备忘.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,9 @@
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\bin\Debug\OracleSugar.xml
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\bin\Debug\OracleSugar.dll
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\bin\Debug\OracleSugar.pdb
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\obj\Debug\OracleSugar.csproj.CoreCompileInputs.cache
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\obj\Debug\OracleSugar.csproj.CopyComplete
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\obj\Debug\OracleSugar.dll
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\obj\Debug\OracleSugar.pdb
+C:\Users\rcw\Downloads\OracleSugar-master\SqlSugar\obj\Debug\OracleSugar.csprojAssemblyReference.cache

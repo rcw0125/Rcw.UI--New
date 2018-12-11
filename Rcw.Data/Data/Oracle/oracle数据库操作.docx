@@ -1,0 +1,73 @@
+--查看当前用户下的所有表
+
+SQL> SELECT t.table_name FROM USER_TABLES t
+
+
+
+--查看表的说明
+
+SQL> select * from user_tab_comments where TABLE_NAME='USER_INFO';
+
+
+
+--查看表的相关属性：字段名称,数据类型,是否主键，是否为空，缺省值，是否唯一，字段描述
+SQL> select * from user_tab_columns where table_name = 'SYS_USER';
+
+
+
+--查看表中列的说明
+
+SQL> select * from user_col_comments where TABLE_NAME='USER_INFO';
+
+
+
+--查询表中的ID列名(cu.*column_name 为ID)
+
+
+ SQL> select cu.* from user_cons_columns cu, user_constraints au 
+where cu.constraint_name = au.constraint_name and au.constraint_type = 'P' and au.table_name = '要查询的表';
+
+1、修改记录
+ class OracleRowIdSetter : ISetterValue
+    {
+        private PropertyInfo prop = null;
+        private OracleDataReader dr = null;
+
+        public OracleRowIdSetter(PropertyInfo prop, OracleDataReader dr)
+        {
+            this.prop = prop;
+            this.dr = dr;
+        }
+
+        public void SetValue(DbEntity item, int col)
+        {
+            //20181114 修改 主表数据不为空时，主表的rowid就不为空
+            //在主表右连接另一个表时，有时，主表可能就会为空
+            //不建议使用右连接
+            //item.RowId = dr.GetString(col);
+            item.RowId = dr.IsDBNull(col) ? "" : dr.GetString(col);
+           // prop.SetValue(item, dr.GetMyString(col), null);
+        }
+    }
+
+	2、
+	{"LoadDataByWhere加载错误：SELECT CHECKGROUPCODE as CheckGroupCode,CHECKGROUPNAME as CheckGroupName,CHECKGROUPTYPE as CheckGroupType,SHORTWORD as ShortWord,
+	QC_MatCheckGroup_View.ROWID FROM QC_MatCheckGroup_View   
+	Where MATNCID=@MATNCID 异常:ORA-01446: 无法使用 DISTINCT, GROUP BY 等子句从视图中选择 ROWID 或采样
+
+	实体是视图时，出现了视图.ROWID
+	3. 数据传输过程报错
+	Dbentity.save(trans)
+	不支持所指定的方法   在数据传输过程中，在执行BeforeSave(trans)时，如果重写了该方法，有可能报错
+
+	3.数据查询的loaddata方法
+	 //2018-11-19修改 当传入的参数是枚举类型时，报错，值不在预期的范围内
+               //加入判断 先校验是否是枚举类型，是的话，先转为int类型
+                if (args[i].GetType().BaseType.FullName == "System.Enum")
+                {
+                    selectCmd.Parameters.Add(item, (int)args[i++]);
+                }
+                else
+                {
+                    selectCmd.Parameters.Add(item, args[i++]);
+                }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     //局部类：解析用到的实体
     internal partial class ResolveExpress

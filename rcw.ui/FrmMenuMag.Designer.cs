@@ -35,9 +35,11 @@
             this.btnAddParentMenu = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddChildMenu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colC_ID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -55,15 +57,13 @@
             this.colC_EMP_ID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colD_MOD_DT = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.tl_Module = new DevExpress.XtraTreeList.TreeList();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bscTSMODULE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tl_Module)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -109,16 +109,42 @@
             this.panelControl1.Size = new System.Drawing.Size(827, 55);
             this.panelControl1.TabIndex = 0;
             // 
-            // simpleButton5
+            // flowLayoutPanel1
             // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(543, 15);
-            this.simpleButton5.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(56, 22);
-            this.simpleButton5.TabIndex = 22;
-            this.simpleButton5.Text = "下移";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton1);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddParentMenu);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddChildMenu);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton3);
+            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton4);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton5);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(823, 51);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
+            // btnAddChildMenu
+            // 
+            this.btnAddChildMenu.ImageOptions.ImageUri.Uri = "Add;Size16x16";
+            this.btnAddChildMenu.Location = new System.Drawing.Point(191, 15);
+            this.btnAddChildMenu.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
+            this.btnAddChildMenu.Name = "btnAddChildMenu";
+            this.btnAddChildMenu.Size = new System.Drawing.Size(91, 22);
+            this.btnAddChildMenu.TabIndex = 19;
+            this.btnAddChildMenu.Text = "添加子目录";
+            this.btnAddChildMenu.Click += new System.EventHandler(this.btnAddChildMenu_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.ImageOptions.ImageUri.Uri = "Edit;Size16x16";
+            this.btnEdit.Location = new System.Drawing.Point(397, 15);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(66, 22);
+            this.btnEdit.TabIndex = 19;
+            this.btnEdit.Text = "修改";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // simpleButton4
             // 
@@ -131,16 +157,16 @@
             this.simpleButton4.Text = "上移";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // btnAddChildMenu
+            // simpleButton5
             // 
-            this.btnAddChildMenu.ImageOptions.ImageUri.Uri = "Add;Size16x16";
-            this.btnAddChildMenu.Location = new System.Drawing.Point(191, 15);
-            this.btnAddChildMenu.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
-            this.btnAddChildMenu.Name = "btnAddChildMenu";
-            this.btnAddChildMenu.Size = new System.Drawing.Size(91, 22);
-            this.btnAddChildMenu.TabIndex = 19;
-            this.btnAddChildMenu.Text = "添加子目录";
-            this.btnAddChildMenu.Click += new System.EventHandler(this.btnAddChildMenu_Click);
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(543, 15);
+            this.simpleButton5.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(56, 22);
+            this.simpleButton5.TabIndex = 22;
+            this.simpleButton5.Text = "下移";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // repositoryItemImageComboBox1
             // 
@@ -204,9 +230,8 @@
             // 
             // colC_DISABLE
             // 
-            this.colC_DISABLE.Caption = "禁用";
-            this.colC_DISABLE.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.colC_DISABLE.FieldName = "C_DISABLE";
+            this.colC_DISABLE.Caption = "状态";
+            this.colC_DISABLE.FieldName = "N_STATUS";
             this.colC_DISABLE.Name = "colC_DISABLE";
             this.colC_DISABLE.OptionsColumn.AllowEdit = false;
             this.colC_DISABLE.Visible = true;
@@ -298,55 +323,29 @@
             this.tl_Module.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageComboBox1,
             this.repositoryItemCheckEdit1});
-            this.tl_Module.Size = new System.Drawing.Size(827, 455);
+            this.tl_Module.Size = new System.Drawing.Size(827, 388);
             this.tl_Module.TabIndex = 1;
             this.tl_Module.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.tl_Module_FocusedNodeChanged);
             this.tl_Module.DoubleClick += new System.EventHandler(this.tl_Module_DoubleClick);
             // 
-            // btnEdit
-            // 
-            this.btnEdit.ImageOptions.ImageUri.Uri = "Edit;Size16x16";
-            this.btnEdit.Location = new System.Drawing.Point(397, 15);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(10, 15, 2, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(66, 22);
-            this.btnEdit.TabIndex = 19;
-            this.btnEdit.Text = "修改";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.simpleButton1);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddParentMenu);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddChildMenu);
-            this.flowLayoutPanel1.Controls.Add(this.simpleButton3);
-            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Controls.Add(this.simpleButton4);
-            this.flowLayoutPanel1.Controls.Add(this.simpleButton5);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(823, 51);
-            this.flowLayoutPanel1.TabIndex = 23;
-            // 
-            // FrmMenuManage
+            // FrmPrivilegeMag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 510);
+            this.ClientSize = new System.Drawing.Size(827, 443);
             this.Controls.Add(this.tl_Module);
             this.Controls.Add(this.panelControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmMenuManage";
+            this.Name = "FrmPrivilegeMag";
             this.Text = "模块管理";
             this.Load += new System.EventHandler(this.FrmMenuManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bscTSMODULE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tl_Module)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

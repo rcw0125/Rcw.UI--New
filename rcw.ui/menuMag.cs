@@ -43,7 +43,7 @@ namespace Rcw.UI
             modNew.C_PARENT_ID = "0";
             modNew.C_ASSEMBLYNAME = "";
             modNew.C_MODULECLASS = "";
-            modNew.C_DISABLE ="1" ;
+            //modNew.C_DISABLE ="1" ;
             modNew.N_IMAGEINDEX = 1;
             //modNew.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew.C_PARENT_ID) + 1;
             modNew.N_ORDER = 1;
@@ -59,7 +59,7 @@ namespace Rcw.UI
             modNew1.C_PARENT_ID = sysModule.C_ID;
             modNew1.C_ASSEMBLYNAME = "Rcw.UI.dll";
             modNew1.C_MODULECLASS = "Rcw.UI.FrmDeptUser";
-            modNew1.C_DISABLE = "1";
+            //modNew1.C_DISABLE = "1";
             modNew1.N_IMAGEINDEX =2;
             modNew1.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew1.C_PARENT_ID) + 1;          
             modNew1.C_EMP_ID = sysUser.C_ID;
@@ -72,7 +72,7 @@ namespace Rcw.UI
             modNew2.C_PARENT_ID = sysModule.C_ID;
             modNew2.C_ASSEMBLYNAME = "Rcw.UI.dll";
             modNew2.C_MODULECLASS = "Rcw.UI.FrmRole";
-            modNew2.C_DISABLE = "1";
+            //modNew2.C_DISABLE = "1";
             modNew2.N_IMAGEINDEX = 2;
             modNew2.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew2.C_PARENT_ID) + 1;
             modNew2.C_EMP_ID = sysUser.C_ID;
@@ -85,7 +85,7 @@ namespace Rcw.UI
             modNew3.C_PARENT_ID = sysModule.C_ID;
             modNew3.C_ASSEMBLYNAME = "Rcw.UI.dll";
             modNew3.C_MODULECLASS = "Rcw.UI.FrmPrivilegeMag";
-            modNew3.C_DISABLE = "1";
+            //modNew3.C_DISABLE = "1";
             modNew3.N_IMAGEINDEX = 2;
             modNew3.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew3.C_PARENT_ID) + 1;
             modNew3.C_EMP_ID = sysUser.C_ID;
@@ -98,7 +98,7 @@ namespace Rcw.UI
             modNew4.C_PARENT_ID = sysModule.C_ID;
             modNew4.C_ASSEMBLYNAME = "Rcw.UI.dll";
             modNew4.C_MODULECLASS = "Rcw.UI.FrmBtnMag";
-            modNew4.C_DISABLE = "1";
+            //modNew4.C_DISABLE = "1";
             modNew4.N_IMAGEINDEX = 2;
             modNew4.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew4.C_PARENT_ID) + 1;
             modNew4.C_EMP_ID = sysUser.C_ID;
@@ -111,7 +111,7 @@ namespace Rcw.UI
             modNew5.C_PARENT_ID = sysModule.C_ID;
             modNew5.C_ASSEMBLYNAME = "Rcw.UI.dll";
             modNew5.C_MODULECLASS = "Rcw.UI.FrmDEPT";
-            modNew5.C_DISABLE = "1";
+            //modNew5.C_DISABLE = "1";
             modNew5.N_IMAGEINDEX = 2;
             modNew5.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew5.C_PARENT_ID) + 1;
             modNew5.C_EMP_ID = sysUser.C_ID;

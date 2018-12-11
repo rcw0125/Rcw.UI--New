@@ -42,6 +42,7 @@ namespace Rcw.UI
         {
             try
             {
+                tl_Module.ClearNodes();
                 string strSql = " 1=1";
                 if (checkEdit1.Checked)
                 {

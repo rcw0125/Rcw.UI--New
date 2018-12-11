@@ -23,8 +23,7 @@ namespace Rcw.UI
         private void FrmRole_Load(object sender, EventArgs e)
         {
             UserButtonRight.GetBtnFun(this);
-            tSUSERBindingSource.DataSource = TS_USER.GetList();
-          
+            tSUSERBindingSource.DataSource = TS_USER.GetList();        
             //PrivilegeMag.SetGvUnEditable(gv_Role);
             RefreshData();
         }
@@ -41,7 +40,7 @@ namespace Rcw.UI
                 roleList = TS_ROLE.GetList(strSql);
                 gc_Role.DataSource = roleList;
                 gv_Role.RefreshData();
-                gv_Role.SetRowColor();
+                //gv_Role.SetRowColor();
                 
             }
             catch (Exception ex)
@@ -112,7 +111,9 @@ namespace Rcw.UI
             //var data = TS_ROLE.GetSelectedRow(gv_Role);
             //data.Update();
             roleList.Update();
-            MessageBox.Show("操作成功！");
+            Message.Show("成功");
+            Message.Show();
+
             RefreshData();
         }
 
@@ -123,7 +124,9 @@ namespace Rcw.UI
             {
                 return;
             }
-            var userList = TS_USER.GetList("c_id in (select c_user_id from ts_user_role where c_role_id=@c_role_id) ",curRole.C_ID);
+            //var userList = TS_USER.GetList("c_id in (select c_user_id from ts_user_role where c_role_id=@c_role_id) ",curRole.C_ID);
+            var userList = TS_USER.Queryable().JoinTable<TS_USER_ROLE>((s1, s2) => s1.C_ID == s2.C_USER_ID, JoinType.Inner)
+                           .Where<TS_USER_ROLE>((s1, s2) => s2.C_ROLE_ID == curRole.C_ID).ToList();
             gc_user.DataSource = userList;
 
         }

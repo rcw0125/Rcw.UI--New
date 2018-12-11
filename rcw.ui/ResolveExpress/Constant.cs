@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     //局部类：拉姆达解析公用常量
     internal partial class ResolveExpress

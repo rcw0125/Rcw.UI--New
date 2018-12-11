@@ -74,13 +74,13 @@ namespace Rcw.UI
                                     displayName = objName.ToString();
                                 }
                                 TS_MODULE item = new TS_MODULE();
-                                item.C_DISABLE = "1";
+                                //item.C_DISABLE = "1";
                                 item.C_ASSEMBLYNAME = this.dlgOpenFile.FileName.Substring(dlgOpenFile.FileName.LastIndexOf("\\")+1);
                                 item.C_MODULECLASS = type.FullName;
                                 item.C_NAME = displayName;
                                 item.C_PARENT_ID = strModuleID;
                                 item.N_ORDER = i_order + 1;
-                                item.C_DISABLE = "1";
+                                //item.C_DISABLE = "1";                             
                                 item.C_EMP_ID = UserInfo.UserID;
 
                                 item.N_MODULE_TYPE = TS_MODULE.MODULE_TYPE.系统模块;

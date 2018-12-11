@@ -58,7 +58,7 @@
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(20, 17);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 0;
@@ -67,7 +67,7 @@
             // lbl_ParentName
             // 
             this.lbl_ParentName.Location = new System.Drawing.Point(71, 17);
-            this.lbl_ParentName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbl_ParentName.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_ParentName.Name = "lbl_ParentName";
             this.lbl_ParentName.Size = new System.Drawing.Size(0, 14);
             this.lbl_ParentName.TabIndex = 1;
@@ -75,7 +75,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(9, 50);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 14);
             this.labelControl2.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             this.icbo_ImgIndex.EditValue = "0";
             this.icbo_ImgIndex.Location = new System.Drawing.Point(71, 48);
-            this.icbo_ImgIndex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbo_ImgIndex.Margin = new System.Windows.Forms.Padding(2);
             this.icbo_ImgIndex.Name = "icbo_ImgIndex";
             this.icbo_ImgIndex.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -107,7 +107,7 @@
             // txt_ModuleName
             // 
             this.txt_ModuleName.Location = new System.Drawing.Point(148, 48);
-            this.txt_ModuleName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ModuleName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ModuleName.Name = "txt_ModuleName";
             this.txt_ModuleName.Size = new System.Drawing.Size(422, 20);
             this.txt_ModuleName.TabIndex = 4;
@@ -115,7 +115,7 @@
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(9, 85);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(48, 14);
             this.labelControl3.TabIndex = 5;
@@ -124,7 +124,7 @@
             // cbo_BllName
             // 
             this.cbo_BllName.Location = new System.Drawing.Point(71, 82);
-            this.cbo_BllName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_BllName.Margin = new System.Windows.Forms.Padding(2);
             this.cbo_BllName.Name = "cbo_BllName";
             this.cbo_BllName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -135,7 +135,7 @@
             // cbo_FrmName
             // 
             this.cbo_FrmName.Location = new System.Drawing.Point(71, 116);
-            this.cbo_FrmName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_FrmName.Margin = new System.Windows.Forms.Padding(2);
             this.cbo_FrmName.Name = "cbo_FrmName";
             this.cbo_FrmName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -145,30 +145,30 @@
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(9, 154);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 14);
+            this.labelControl4.Size = new System.Drawing.Size(24, 14);
             this.labelControl4.TabIndex = 8;
-            this.labelControl4.Text = "是否禁用";
+            this.labelControl4.Text = "状态";
             // 
             // icbo_State
             // 
             this.icbo_State.EditValue = "1";
             this.icbo_State.Location = new System.Drawing.Point(71, 151);
-            this.icbo_State.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbo_State.Margin = new System.Windows.Forms.Padding(2);
             this.icbo_State.Name = "icbo_State";
             this.icbo_State.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.icbo_State.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("启用", "1", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("禁用", "0", -1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("正常", "0", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("停用", "1", -1)});
             this.icbo_State.Size = new System.Drawing.Size(91, 20);
             this.icbo_State.TabIndex = 9;
             // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(214, 154);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(48, 14);
             this.labelControl5.TabIndex = 10;
@@ -177,7 +177,7 @@
             // txt_Parameter
             // 
             this.txt_Parameter.Location = new System.Drawing.Point(264, 151);
-            this.txt_Parameter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Parameter.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Parameter.Name = "txt_Parameter";
             this.txt_Parameter.Size = new System.Drawing.Size(307, 20);
             this.txt_Parameter.TabIndex = 11;
@@ -186,7 +186,7 @@
             // 
             this.simpleButton1.ImageOptions.ImageUri.Uri = "Save;Size16x16";
             this.simpleButton1.Location = new System.Drawing.Point(431, 186);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(56, 24);
             this.simpleButton1.TabIndex = 12;
@@ -197,7 +197,7 @@
             // 
             this.simpleButton2.ImageOptions.ImageUri.Uri = "Close;Size16x16";
             this.simpleButton2.Location = new System.Drawing.Point(514, 186);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(56, 24);
             this.simpleButton2.TabIndex = 13;
@@ -234,7 +234,7 @@
             this.Controls.Add(this.lbl_ParentName);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMenuAdd";

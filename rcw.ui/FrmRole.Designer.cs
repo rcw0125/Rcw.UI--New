@@ -36,18 +36,21 @@
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Right = new DevExpress.XtraEditors.SimpleButton();
+            this.tSUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tSUSERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.gc_Role = new DevExpress.XtraGrid.GridControl();
             this.gv_Role = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.tSUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gc_user = new DevExpress.XtraGrid.GridControl();
-            this.tSUSERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gv_user = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colC_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colC_NAME = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,14 +83,20 @@
             this.colSaveEnable = new DevExpress.XtraGrid.Columns.GridColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_RoleName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_Role)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Role)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_user)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_user)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,6 +176,48 @@
             this.btn_Right.Text = "权限设置";
             this.btn_Right.Click += new System.EventHandler(this.btn_Right_Click);
             // 
+            // tSUSERBindingSource
+            // 
+            this.tSUSERBindingSource.DataSource = typeof(Rcw.Model.TS_USER);
+            // 
+            // tSUSERBindingSource1
+            // 
+            this.tSUSERBindingSource1.DataSource = typeof(Rcw.Model.TS_USER);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridView2
+            // 
+            this.gridView2.Name = "gridView2";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.splitContainer1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 34);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(894, 366);
+            this.panelControl1.TabIndex = 2;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(2, 2);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.gc_Role);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gc_user);
+            this.splitContainer1.Size = new System.Drawing.Size(890, 362);
+            this.splitContainer1.SplitterDistance = 494;
+            this.splitContainer1.TabIndex = 5;
+            // 
             // gc_Role
             // 
             this.gc_Role.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -177,8 +228,8 @@
             this.gc_Role.Name = "gc_Role";
             this.gc_Role.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1});
-            this.gc_Role.Size = new System.Drawing.Size(574, 366);
-            this.gc_Role.TabIndex = 2;
+            this.gc_Role.Size = new System.Drawing.Size(494, 362);
+            this.gc_Role.TabIndex = 6;
             this.gc_Role.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_Role});
             // 
@@ -229,10 +280,6 @@
             this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             this.repositoryItemLookUpEdit1.ValueMember = "C_ID";
             // 
-            // tSUSERBindingSource
-            // 
-            this.tSUSERBindingSource.DataSource = typeof(Rcw.Model.TS_USER);
-            // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "维护时间";
@@ -247,23 +294,8 @@
             this.gridColumn5.Caption = "状态";
             this.gridColumn5.FieldName = "N_STATUS";
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 34);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.gc_Role);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.gc_user);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(894, 366);
-            this.splitContainerControl1.SplitterPosition = 574;
-            this.splitContainerControl1.TabIndex = 3;
-            this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // gc_user
             // 
@@ -272,14 +304,10 @@
             this.gc_user.Location = new System.Drawing.Point(0, 0);
             this.gc_user.MainView = this.gv_user;
             this.gc_user.Name = "gc_user";
-            this.gc_user.Size = new System.Drawing.Size(315, 366);
-            this.gc_user.TabIndex = 0;
+            this.gc_user.Size = new System.Drawing.Size(392, 362);
+            this.gc_user.TabIndex = 5;
             this.gc_user.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_user});
-            // 
-            // tSUSERBindingSource1
-            // 
-            this.tSUSERBindingSource1.DataSource = typeof(Rcw.Model.TS_USER);
             // 
             // gv_user
             // 
@@ -477,7 +505,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 400);
-            this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmRole";
@@ -486,14 +514,20 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_RoleName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_Role)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Role)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_user)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSUSERBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_user)).EndInit();
             this.ResumeLayout(false);
 
@@ -505,22 +539,25 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txt_RoleName;
         private DevExpress.XtraEditors.SimpleButton btn_Add;
+        private DevExpress.XtraEditors.SimpleButton btn_Query;
+        private DevExpress.XtraEditors.SimpleButton btn_Right;
+        private System.Windows.Forms.BindingSource tSUSERBindingSource;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private System.Windows.Forms.BindingSource tSUSERBindingSource1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraGrid.GridControl gc_Role;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_Role;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraEditors.SimpleButton btn_Query;
-        private DevExpress.XtraEditors.SimpleButton btn_Right;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
-        private System.Windows.Forms.BindingSource tSUSERBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraGrid.GridControl gc_user;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_user;
-        private System.Windows.Forms.BindingSource tSUSERBindingSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colC_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colC_NAME;
         private DevExpress.XtraGrid.Columns.GridColumn colC_DEPT;

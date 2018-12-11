@@ -63,7 +63,8 @@ namespace Rcw.UI
                         ShowForm(cbo_BllName.Text);
 
                         cbo_FrmName.Text = curModule.C_MODULECLASS.ToString();
-                        icbo_State.Text = curModule.C_DISABLE.ToString();
+                        //icbo_State.SelectedItem = curModule.N_STATUS;
+                        icbo_State.SelectedIndex = (int)curModule.N_STATUS;
                         txt_Parameter.Text = curModule.C_QUERY_STR.ToString();
                     }
                     else
@@ -82,7 +83,7 @@ namespace Rcw.UI
                     {
                         lbl_ParentName.Text = "";
                     }
-
+                    icbo_State.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -173,7 +174,8 @@ namespace Rcw.UI
                     curModule.C_NAME = txt_ModuleName.Text.Trim();
                     curModule.C_ASSEMBLYNAME = cbo_BllName.Text;
                     curModule.C_MODULECLASS = cbo_FrmName.Text;
-                    curModule.C_DISABLE = icbo_State.EditValue.ToString();
+                    //curModule.C_DISABLE = icbo_State.EditValue.ToString();
+                    curModule.N_STATUS = (TS_MODULE.STATUS_TYPE)Convert.ToInt16(icbo_State.EditValue);
                     curModule.N_IMAGEINDEX = Convert.ToInt32(icbo_ImgIndex.EditValue.ToString());
                     curModule.C_EMP_ID = UserInfo.UserID;         
                     curModule.C_QUERY_STR = txt_Parameter.Text.Trim();
@@ -198,7 +200,8 @@ namespace Rcw.UI
                     modNew.C_NAME = txt_ModuleName.Text.Trim();
                     modNew.C_ASSEMBLYNAME = cbo_BllName.Text;
                     modNew.C_MODULECLASS = cbo_FrmName.Text;
-                    modNew.C_DISABLE = icbo_State.EditValue.ToString();
+                    //modNew.C_DISABLE = icbo_State.EditValue.ToString();
+                    curModule.N_STATUS = (TS_MODULE.STATUS_TYPE)Convert.ToInt16(icbo_State.EditValue);
                     modNew.N_IMAGEINDEX = Convert.ToInt32(icbo_ImgIndex.EditValue.ToString());
                     modNew.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew.C_PARENT_ID) +1;
                     modNew.C_EMP_ID = UserInfo.UserID;

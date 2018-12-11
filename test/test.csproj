@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Rcw.Data">
-      <HintPath>..\rcw.ui\bin\Debug\Rcw.Data.dll</HintPath>
+    <Reference Include="Rcw.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Rcw.Data\bin\Debug\Rcw.Data.dll</HintPath>
     </Reference>
     <Reference Include="Rcw.UI">
       <HintPath>..\rcw.ui\bin\Debug\Rcw.UI.dll</HintPath>

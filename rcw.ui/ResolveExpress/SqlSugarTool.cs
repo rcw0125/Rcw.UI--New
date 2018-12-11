@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     /// <summary>
     /// ** 描述：SqlSugar工具类

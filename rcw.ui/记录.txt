@@ -1,0 +1,18 @@
+                 var data= DbContext.GetInstance().Queryable<Student>().ToList();
+
+                var join = TS_USER.Queryable().JoinTable<TS_USER_ROLE>((s1, s2) => s1.C_ID == s2.C_USER_ID).Where<TS_USER_ROLE>((s1, s2) => s1.C_ACCOUNT != " ").ToList();
+                TS_USER.Queryable().Where(o => o.C_AREA == "").OrderBy(o=>o.C_AREA).ToList();
+                //IQueryable<TS_USER> user=null;
+                //TS_USER.Where(user, o => o.N_TYPE == 3 && o.C_ACCOUNT=="17318" && o.C_TS.CompareTo("2018-12-03 17:11:44") >0&&o.N_STATUS== TS_USER.userStatus.正常&&o.C_TS.CompareTo("2018-12-08 17:11:44") <0);
+
+                //TS_USER.IQueryable.Where(o => o.N_TYPE == 3 && o.C_ACCOUNT == "17318" && o.C_TS.CompareTo("2018-12-03 17:11:44") > 0 && o.N_STATUS == TS_USER.userStatus.正常 && o.C_TS.CompareTo("2018-12-08 17:11:44") < 0);
+                //ModTS_USER modUser = bllUser.GetModel(txt_Name.Text.Trim(), Common.MD5(txt_Pwd.Text.Trim()));
+                WaitingFrom.ShowWait();
+                //TS_USER User = TS_USER.GetModel("  C_ACCOUNT=@C_ACCOUNT and C_PASSWORD=@C_PASSWORD", txt_Name.Text.Trim(), Common.MD5(txt_Pwd.Text.Trim()));
+
+				 //var data = TS_USER.IQueryable.Where(o => o.ts !=null);
+                var min = TS_USER.Queryable().Min(o => o.C_ACCOUNT);
+                var max = TS_USER.Queryable().Max(o => o.C_ACCOUNT);
+				  var data1 = TS_USER.Queryable().
+                    Where(o => o.C_ACCOUNT.ToString() == userName && o.C_PASSWORD == passWord.ToString() && o.N_STATUS == TS_USER.userStatus.正常 && o.C_TS.CompareTo("2018-12-03 17:11:44") > 0 && o.ts != null && o.ts > System.DateTime.Now.AddDays(-5)).ToList();
+         

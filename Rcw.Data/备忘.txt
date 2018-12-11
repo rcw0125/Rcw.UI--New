@@ -1,0 +1,71 @@
+
+1.data模块：对数据库的操作
+2.CalFrameWork模块：公式计算
+根据数据库不同引用
+Oracle.ManagedDataAccess
+MySql.Data
+
+字符串拼接  Oracle与sql的不同
+select distinct(zpdh||'_'||rwdh) as cardid from  QC_Sample_Veh  where wllx='火运' 
+
+select distinct(zpdh+'_'+rwdh) as cardid from  QC_Sample_Veh
+
+oracle的数据类型 
+varchar
+datetime
+number
+number（1） 表示布尔型
+
+sql server的数据类型 
+varchar
+datetime
+decimal（多种数据）
+bit （布尔型）
+
+
+oracle的自增序列  数据类型必须是int
+
+TransDate错误：SELECT SAMPLE_PD_ID as sample_pd_id,WLLX as WLLX,MATNAME as matname,MATCODE as matcode,TYPE as type,SF as sf,HF as hf,HFF as hff,Y as Y,
+G as G,TFE as TFe,SIO2 as SiO2,P as P,CU as Cu,ZN as Zn,CAO as CaO,MGO as MgO,CAOMGO as CaOMgO,AL2O3 as Al2O3,BZCS as BZCS FROM QC_Sample_zdpdyj  
+Where 1=1 异常:DbEntiry save(trans)出现异常System.Exception: 插入错误：insert into QC_Sample_zdpdyj(SAMPLE_PD_ID,WLLX,MATNAME,MATCODE,TYPE,SF,HF,HFF,Y,G,
+TFE,SIO2,P,CU,ZN,CAO,MGO,CAOMGO,AL2O3,BZCS) values(:sample_pd_id,:WLLX,:matname,:matcode,:type,:sf,:hf,:hff,:Y,:G,:TFe,:SiO2,:P,:Cu,:Zn,:CaO,:MgO,:CaOMgO,
+:Al2O3,:BZCS) RETURNING ROWID INTO :RID 异常:ORA-08002: 序列 QC_SAMPLE_ZDPDYJ_S.CURRVAL 尚未在此会话中定义
+   在 Rcw.Data.Oracle.OracleDataSource.Insert(IDbTransaction trans, DbEntity item, DbSql dbSql)
+   在 Rcw.Data.DbEntity.DbInsert(SaveTemplate saveTemplate)
+   在 Rcw.Data.DbEntity.Save(IDbTransaction trans, DataSource ds)”
+
+
+update t1 set t1.SAMPLESTATE=6 
+from QC_SAMPLE_MIX t1 where t1.SAMPLESTATE=4 
+and not exists
+ ( select * from QC_MIXCHECKGROUP t2 inner join QC_SAMPLE_LAB t3 on t3.SAMPLE_LAB_ID=t2.SAMPLE_LAB_ID  
+ where t2.SAMPLE_MIX_ID=t1.SAMPLE_MIX_ID and t3.CheckGroupType='后续检验' and t3.BillType<>'审核通过')
+
+
+update QC_SAMPLE_MIX t1 set t1.SAMPLESTATE=6  where t1.SAMPLESTATE=4 and not exists 
+( select * from QC_MIXCHECKGROUP t2 inner join QC_SAMPLE_LAB t3 on t3.SAMPLE_LAB_ID=t2.SAMPLE_LAB_ID  
+where t2.SAMPLE_MIX_ID=t1.SAMPLE_MIX_ID and t3.CheckGroupType='后续检验' and t3.BillType<>'审核通过')
+
+：SELECT main.SAMPLE_TBZD as Sample_TBZD,main.SAMPLE_MIX_ID as Sample_Mix_ID,main.WCQY as WCQY,main.WCDY as WCDY,main.MAINSAMPLEMIXID as MainSampleMixId,
+main.WLLX as WLLX,material.WLLX as matWLLX,main.SCFS as SCFS,main.FJDYR as Fjdyr,parent.MIX_TIME as MainSampleMixTime,parent.ZYDANHAO as MainSampleZyDanHao,
+main.YPDANHAO as StoreCode,main.WPCODE as WpCode,wp.WCNAME as WpName,main.SUPPLIERCODE as SupplierCode,supplier.CUSTSHORTNAME as SupplierName,main.MATPK
+as MatPK,main.MATCODE as MatCode,mat.INVNAME as MatName,main.TEMPID as TempID,main.CARDID as CardID,main.MIXCOUNT as MixCount,main.MIXPLANCOUNT as 
+MixPlanCount,main.MIXUSER as MixUser,main.MIX_TIME as Mix_Time,main.FANGTONG_USER as FangTong_User,main.FANGTONG_TIME as FangTong_Time,main.SHOUTONG_USER 
+as ShouTong_User,main.SHOUTONG_TIME as ShouTong_Time,main.ZYDANHAO as ZyDanHao,main.ZYRECVUSER as ZyRecvUser,main.ZYRECVTIME as ZyRecvTime,main.KOUZA as 
+KouZa,main.KOUSHUI as KouShui,main.QUALITYLEVELID as QualityLevelID,main.LOCALQCLEVEL as LocalQcLevel,main.JUDGECONDITION as JudgeCondition,main.JUDGEUSER 
+as JudgeUser,main.JUDGETIME as JudgeTime,main.UPLOADNCUSER as UploadNcUser,main.UPLOADNCTIME as UploadNcTime,main.EXAMINEDEPT as ExamineDept,main.EXAMINETYPE
+as ExamineType,main.FETCHTIME as FetchTime,main.FETCHPERSON as FetchPerson,main.FETCHPLACE as FetchPlace,main.VEHNO as VehNo,main.SAMPLE_CYLX as 
+Sample_Cylx,main.INDEPENDENTREPORT as IndependentReport,main.NOTICEBILLID as NoticeBillId,main.SAMPLETYPE as SampleType,main.SAMPLESTATE as SampleState,main.MEMO 
+as Memo,main.NCQCBILLNO as NcQcBillNo,grandparent.MIX_TIME as grandMainSampleMixTime,main.ROWID FROM QC_Sample_Mix main  LEFT join QC_Sample_Mix parent 
+on parent.Sample_Mix_ID=main.MainSampleMixId  LEFT join QC_Sample_Mix grandparent on grandparent.Sample_Mix_ID=parent.MainSampleMixId  LEFT join tb_WorkCenter
+wp on wp.WCCode=main.WpCode  LEFT join BD_INVBASDOC mat on mat.PK_INVBASDOC=main.MatPK  LEFT join BD_CUBASDOC supplier on supplier.CUSTCODE=main.SupplierCode
+LEFT join QC_material material on material.matncid=main.MatPK  
+Where main.SampleState>=6 and main.SampleState<9 and main.WLLX='火运' and main.mix_time>'2018-11-20 11:00:21'
+order by main.ZyRecvTime,main.mix_time 异常:ORA-01861: 文字与格式字符串不匹配 异常”
+
+在sql server 数据库中 mix_time>'2018-11-20 11:00:21' 可以执行，在oracle数据库中会报错
+
+
+20181206 增加lambda表达式的写法
+
+20181210  lambda 优化

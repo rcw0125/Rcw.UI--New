@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SQLiteSugar
+namespace Rcw.Data
 {
     /// <summary>
     /// ** 描述：公共参数表

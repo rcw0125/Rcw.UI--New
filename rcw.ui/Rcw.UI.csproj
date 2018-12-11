@@ -50,8 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="Rcw.Data">
-      <HintPath>..\..\Rcw.Data\bin\Debug\Rcw.Data.dll</HintPath>
+    <Reference Include="Rcw.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Rcw.Data\bin\Debug\Rcw.Data.dll</HintPath>
     </Reference>
     <Reference Include="Rcw.Method">
       <HintPath>..\..\Rcw.Method\bin\Debug\Rcw.Method.dll</HintPath>
@@ -73,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomWaitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,24 +178,12 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="menuMag.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Model\Student.cs" />
     <Compile Include="Model\test.cs" />
     <Compile Include="Model\TS_USER_FUN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PubModel\KeyValue.cs" />
-    <Compile Include="PubModel\PubEnum.cs" />
-    <Compile Include="PubModel\PubModel.cs" />
-    <Compile Include="ResolveExpress\Check.cs" />
-    <Compile Include="ResolveExpress\Constant.cs" />
-    <Compile Include="ResolveExpress\Expressions.cs" />
-    <Compile Include="ResolveExpress\IsWhatExtensions.cs" />
-    <Compile Include="ResolveExpress\Main.cs" />
-    <Compile Include="ResolveExpress\Method.cs" />
-    <Compile Include="ResolveExpress\Models.cs" />
-    <Compile Include="ResolveExpress\Property.cs" />
-    <Compile Include="ResolveExpress\PubConvert.cs" />
-    <Compile Include="ResolveExpress\SqlSugarTool.cs" />
-    <Compile Include="ResolveExpress\SqlSugarToolExtensions.cs" />
     <Compile Include="ServerTime.cs" />
     <Compile Include="toolstripMenu.cs">
       <SubType>Form</SubType>
@@ -211,6 +206,9 @@
     <Compile Include="UserButtonRight.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="WaitingFrom.cs" />
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomWaitForm.resx">
       <DependentUpon>CustomWaitForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,8 +289,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="记录.txt" />
     <None Include="Resources\飞鸽截图20181017153459.png" />
     <Content Include="权限分配规则.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rcw.Oracle\Rcw.Oracle.csproj">
+      <Project>{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}</Project>
+      <Name>Rcw.Oracle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
