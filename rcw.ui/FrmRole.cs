@@ -111,9 +111,9 @@ namespace Rcw.UI
             //var data = TS_ROLE.GetSelectedRow(gv_Role);
             //data.Update();
             roleList.Update();
-            Message.Show("成功");
+            string a = "失败，是否是因为没有权限？失败，是否是因为没有权限？失败，是否是因为没有权限？失败，是否是因为没有权限？";           
+            Message.Show(a);
             Message.Show();
-
             RefreshData();
         }
 

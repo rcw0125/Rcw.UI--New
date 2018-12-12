@@ -46,14 +46,7 @@ namespace Rcw.UI
 
             }
 
-            //try
-            //{
-            //    SplashScreenManager.ShowForm(typeof(CustomWaitForm));
-            //}
-            //catch
-            //{
-
-            //}
+          
         }
 
         public static void CloseWait()
@@ -71,14 +64,7 @@ namespace Rcw.UI
 
             }
 
-            //try
-            //{
-            //    SplashScreenManager.CloseForm();
-            //}
-            //catch
-            //{
-
-            //}
+            
         }
     }
 }

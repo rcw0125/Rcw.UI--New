@@ -11,10 +11,11 @@ namespace Rcw.UI
 {
     public partial class MessageForm : WaitForm
     {
+        public int second = 2;
         public MessageForm()
         {
             InitializeComponent();
-            this.progressPanel1.AutoHeight = true;
+            //this.progressPanel1.AutoHeight = true;
         }
 
         #region Overrides
@@ -22,12 +23,20 @@ namespace Rcw.UI
         public override void SetCaption(string caption)
         {
             base.SetCaption(caption);
-            this.progressPanel1.Caption = caption;
+            label1.Text = caption;
+            //this.progressPanel1.Caption = caption;
         }
         public override void SetDescription(string description)
         {
             base.SetDescription(description);
-            this.progressPanel1.Description = description;
+            double d = 0;
+            if (double.TryParse(description, out d))
+            {
+                second = Convert.ToInt16(description);
+            }
+            label2.Text = second + "秒后自动关闭";
+            //label1.Text = description;
+            //this.progressPanel1.Description = description;
         }
         public override void ProcessCommand(Enum cmd, object arg)
         {
@@ -38,6 +47,12 @@ namespace Rcw.UI
 
         public enum WaitFormCommand
         {
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            second--;
+            label2.Text = second + "秒后自动关闭";
         }
     }
 }
