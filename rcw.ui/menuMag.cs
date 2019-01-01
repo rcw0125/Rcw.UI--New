@@ -14,15 +14,17 @@ namespace Rcw.UI
 
         public static void initSystem()
         {
-            //Rcw.Data.DbContext.AddDataSource("CAP", DbContext.DbType.Oracle, "192.168.2.204", "orcl", "XGCAPTEST", "XGCAPTEST");
-            //DbContext.DefaultDataSourceName = "CAP";
-
+            Rcw.Data.DbContext.AddDataSource("lg", DbContext.DbType.Oracle, "192.168.36.151", "XGMES", "XGMES", "XGMES");
+            DbContext.DefaultDataSourceName = "lg";
+            Rcw.Data.DbContext.Create<Rcw.Model.TS_EQUIPMENT>();
             DbContext.Create<TS_USER>();
             DbContext.Create<TS_ROLE>();
             DbContext.Create<TS_USER_ROLE>();
             DbContext.Create<TS_ROLE_FUN>();
+            DbContext.Create<TS_USER_FUN>();
             DbContext.Create<TS_Dept>();
             DbContext.Create<TS_MODULE>();
+
             TS_USER user = new TS_USER();
             user.C_NAME = "管理员";
             user.C_ACCOUNT = "system";
@@ -119,13 +121,37 @@ namespace Rcw.UI
             modNew5.C_QUERY_STR = "";
             modNew5.Save();
 
+            TS_MODULE modNew6 = new TS_MODULE();
+            modNew6.C_NAME = "设备档案";
+            modNew6.C_PARENT_ID = sysModule.C_ID;
+            modNew6.C_ASSEMBLYNAME = "Rcw.UI.dll";
+            modNew6.C_MODULECLASS = "Rcw.UI.FrmEquip";
+            //modNew5.C_DISABLE = "1";
+            modNew6.N_IMAGEINDEX = 2;
+            modNew6.N_ORDER = PrivilegeMag.GetModuleMaxOrder(modNew5.C_PARENT_ID) + 1;
+            modNew6.C_EMP_ID = sysUser.C_ID;
+            modNew6.N_MODULE_TYPE = TS_MODULE.MODULE_TYPE.系统模块;
+            modNew6.C_QUERY_STR = "";
+            modNew6.Save();
+
             TS_Dept tsDept = new TS_Dept();
             tsDept.C_ID = "1";
             tsDept.C_PARENT_ID = "-1";
-            tsDept.C_NAME = "集团";
+            tsDept.C_NAME = "炼钢厂";
             tsDept.C_EMP_ID = sysUser.C_ID;
             tsDept.N_STATUS = 1;
             tsDept.Save();
+
+            TS_EQUIPMENT tsEquip = new TS_EQUIPMENT();
+            tsEquip.C_ID = "11";
+            tsEquip.C_PARENT_ID = "-1";
+            tsEquip.C_PARENT_NAME = "";
+            tsEquip.C_FULLNAME = "1#转炉";
+            tsEquip.C_NAME = "1#转炉";
+
+            tsEquip.C_EMP_ID = sysUser.C_ID;
+            tsEquip.N_STATUS = 1;
+            tsEquip.Save();
         }
 
         /// <summary>
@@ -158,7 +184,22 @@ namespace Rcw.UI
             return TS_Dept.GetList("N_STATUS=1  order by c_code");
         }
 
-       
+        /// <summary>
+        /// 获得部门根节点数据列表
+        /// </summary>
+        public static List<TS_EQUIPMENT> GetEquipRootList()
+        {
+            return TS_EQUIPMENT.GetList("N_STATUS=1 and C_PARENT_ID='-1' order by c_code");
+        }
+
+        /// <summary>
+		/// 获得部门子节点数据列表
+		/// </summary>
+		public static List<TS_EQUIPMENT> GetEquipList()
+        {
+            return TS_EQUIPMENT.GetList("N_STATUS=1  order by c_code");
+        }
+
 
         /// <summary>
         /// 获取最大部门id
@@ -176,6 +217,44 @@ namespace Rcw.UI
             else
             {
                 return (Convert.ToInt64(obj.ToString())+1).ToString();
+            }
+        }
+
+        /// <summary>
+        /// 获取最大部门id
+        /// </summary>
+        public static string GetEquipMaxId(string c_parent_id)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select max(t.c_id) from ts_equipment t where t.c_parent_id='" + c_parent_id + "' ");
+            object obj = DbContext.ExecuteScalar(strSql.ToString());
+
+            if (obj == null || Convert.IsDBNull(obj))
+            {
+                return c_parent_id + "01";
+            }
+            else
+            {
+                return (Convert.ToInt64(obj.ToString()) + 1).ToString();
+            }
+        }
+
+        /// <summary>
+        /// 获取最大部门id
+        /// </summary>
+        public static string GetEquipParentFullName(string c_id)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select max(t.c_fullname) from ts_equipment t where t.c_id='" + c_id + "' ");
+            object obj = DbContext.ExecuteScalar(strSql.ToString());
+
+            if (obj == null || Convert.IsDBNull(obj))
+            {
+                return "";
+            }
+            else
+            {
+                return obj.ToString();
             }
         }
 

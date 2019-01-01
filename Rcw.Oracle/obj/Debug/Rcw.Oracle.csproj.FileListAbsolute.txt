@@ -6,3 +6,12 @@ C:\Users\rcw\Desktop\Rcw.UI\Rcw.Oracle\bin\Debug\Rcw.Oracle.dll
 C:\Users\rcw\Desktop\Rcw.UI\Rcw.Oracle\bin\Debug\Rcw.Oracle.pdb
 C:\Users\rcw\Desktop\Rcw.UI\Rcw.Oracle\obj\Debug\Rcw.Oracle.dll
 C:\Users\rcw\Desktop\Rcw.UI\Rcw.Oracle\obj\Debug\Rcw.Oracle.pdb
+C:\Users\rcw\Desktop\Rcw.UI\Rcw.Oracle\obj\Debug\Rcw.Oracle.csprojAssemblyReference.cache
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\bin\Debug\Rcw.Oracle.xml
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\bin\Debug\Rcw.Oracle.dll
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\bin\Debug\Rcw.Oracle.pdb
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\obj\Debug\Rcw.Oracle.csproj.CoreCompileInputs.cache
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\obj\Debug\Rcw.Oracle.csproj.CopyComplete
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\obj\Debug\Rcw.Oracle.dll
+C:\Users\rcw\Desktop\Rcw.UI20181217\Rcw.Oracle\obj\Debug\Rcw.Oracle.pdb

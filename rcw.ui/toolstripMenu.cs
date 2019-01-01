@@ -61,7 +61,20 @@ namespace Rcw.UI
                         secondMenu.Click += new EventHandler(ItemClick);
                         this.CreateChildNodeNew(secondMenu, items.C_ID.ToString(), 10f);
                     }
-                   
+
+                    foreach (var items in list)
+                    {
+                        ToolStripMenuItem secondMenu = new ToolStripMenuItem();
+                        secondMenu.Name = items.C_MODULECLASS;
+                        secondMenu.Text = items.C_NAME;
+                        secondMenu.Tag = items.C_ASSEMBLYNAME;
+                        secondMenu.Font = new System.Drawing.Font("新宋体", 10F);
+                        // to.DropDownItems.Add(secondMenu);
+                        toolStripDropDownButton1.DropDownItems.Add(secondMenu);
+                        secondMenu.Click += new EventHandler(ItemClick);
+                        this.CreateChildNodeNew(secondMenu, items.C_ID.ToString(), 10f);
+                    }
+
                 }
             }
             catch (Exception ex)

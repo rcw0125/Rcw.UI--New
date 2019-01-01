@@ -74,6 +74,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="FrmEquipDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquipDoc.Designer.cs">
+      <DependentUpon>FrmEquipDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEquipMag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquipMag.Designer.cs">
+      <DependentUpon>FrmEquipMag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquip.Designer.cs">
+      <DependentUpon>FrmEquip.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +199,7 @@
     <Compile Include="Message.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Model\test.cs" />
+    <Compile Include="Model\TS_EQUIPMENT.cs" />
     <Compile Include="Model\TS_USER_FUN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,9 +222,19 @@
     <Compile Include="Model\TS_ROLE.cs" />
     <Compile Include="Model\TS_USER.cs" />
     <Compile Include="Model\TS_USER_ROLE.cs" />
+    <Compile Include="Model\TS_EQUIPMENT_ITEM.cs" />
     <Compile Include="UserButtonRight.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="WaitingFrom.cs" />
+    <EmbeddedResource Include="FrmEquipDoc.resx">
+      <DependentUpon>FrmEquipDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEquipMag.resx">
+      <DependentUpon>FrmEquipMag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEquip.resx">
+      <DependentUpon>FrmEquip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageForm.resx">
       <DependentUpon>MessageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +304,8 @@
       <DependentUpon>topMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Rcw.Model.TS_EQUIPMENT.datasource" />
+    <None Include="Properties\DataSources\Rcw.Model.TS_EQUIPMENT_ITEM.datasource" />
     <None Include="Properties\DataSources\Rcw.Model.TS_MODULE.datasource" />
     <None Include="Properties\DataSources\Rcw.Model.TS_USER.datasource" />
     <None Include="Properties\DataSources\TS_DEPT.datasource" />

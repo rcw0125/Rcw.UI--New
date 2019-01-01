@@ -16,9 +16,11 @@ namespace test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Rcw.Data.DbContext.SetDbName(DbContext.DbName.iuapdb);
-            Rcw.Data.DbContext.Create<Rcw.Model.TS_USER_FUN>();
-           // Rcw.UI.PrivilegeMag.initSystem();
+            //Rcw.Data.DbContext.SetDbName(DbContext.DbName.iuapdb);
+            Rcw.Data.DbContext.AddDataSource("lg", DbContext.DbType.Oracle, "192.168.36.151", "XGMES", "XGMES", "XGMES");
+            DbContext.DefaultDataSourceName = "lg";
+            Rcw.Data.DbContext.Create<Rcw.Model.TS_EQUIPMENT_ITEM>();
+            //Rcw.UI.PrivilegeMag.initSystem();
             Application.Run(new Rcw.UI.Login());
         }
     }
